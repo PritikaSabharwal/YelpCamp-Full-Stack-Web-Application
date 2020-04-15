@@ -25,7 +25,7 @@ var indexroutes=require("./routes/index");
 // }).catch(err=>{
 // 	console.log("error:",err.message);
 // });
-mongoose.connect("mongodb+srv://pritika:%24sonia77@cluster0-ongjw.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true});
+mongoose.connect("mongodb+srv://pritika:pritika20@cluster0-ongjw.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true});
 app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
