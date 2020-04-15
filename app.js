@@ -20,7 +20,7 @@ var campgroundroutes=require("./routes/campgrounds");
 var indexroutes=require("./routes/index");
 
 //mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser: true});
-mongoose.connect("mongodb+srv://pritika:pritika20@cluster0-ongjw.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true,useCreateIndex:true}).then(()=>{
+mongoose.connect("mongodb+srv://pritika:pritika20@cluster0-ongjw.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true}).then(()=>{
 	console.log("connected to db");
 }).catch(err=>{
 	console.log("error:",err.message);
