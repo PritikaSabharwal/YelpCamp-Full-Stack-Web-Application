@@ -25,6 +25,10 @@ var indexroutes=require("./routes/index");
 // }).catch(err=>{
 // 	console.log("error:",err.message);
 // });
+app.use(indexroutes);
+app.use("/campgrounds",campgroundroutes);
+app.use("/campgrounds/:id/comments",commentroutes);
+
 mongoose.connect("mongodb+srv://pritika:pritika20@cluster0-ongjw.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true});
 app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs");
@@ -53,9 +57,6 @@ app.use(function(req,res,next){
 	res.locals.success=req.flash("success");
 	next();
 });
-app.use(indexroutes);
-app.use("/campgrounds",campgroundroutes);
-app.use("/campgrounds/:id/comments",commentroutes);
 
 
 
